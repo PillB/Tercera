@@ -1,0 +1,18 @@
+{
+  "name": "tercera-preentrega",
+  "version": "1.0.0",
+  "description": "tercera preentrega Coderhouse Web Dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/PillB/Tercera"
+  },
+  "keywords": [
+    "Coderhouse"
+  ],
+  "author": "PillB",
+  "license": "ISC"
+}
