@@ -1,0 +1,36 @@
+@import 'navbar-footer';
+@import 'carousel-grid';
+
+// Media Queries for responsive layout
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@media (max-width: $breakpoint-sm) {
+    // Small devices adjustments
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    // Medium devices adjustments
+}
+
+@media (min-width: $breakpoint-lg) {
+    // Large devices adjustments
+    .carousel .card, .grid-container .card {
+        // Enhance grid layout for larger devices
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    // Extra large devices adjustments
+    .carousel .card, .grid-container .card {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
