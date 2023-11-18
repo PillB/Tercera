@@ -1,0 +1,8 @@
+#map-container {
+    margin: 2rem 0;
+    #map { 
+        height: 400px; // Customizable height
+        width: 100%;
+        border: 1px solid #ccc; // Add a border for better visibility
+    }
+}
