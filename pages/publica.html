@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publish your AI projects or articles on CrearIA, a community platform for AI enthusiasts.">
+    <meta name="keywords" content="CrearIA, AI, Publish, Projects, Articles">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>CrearIA - Publica tus Proyectos o Artículos</title>
+</head>
+<body>
+    <header class="header-content">
+        <div class="container">
+            <h1><a href="../index.html">CrearIA</a></h1>
+            <nav class="navbar">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explorar.html">Explorar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="talleres.html">Talleres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="publica.html">Publica</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section class="publicacion">
+            <div class="container">
+                <h2 class="mb-4">Publica tu Proyecto o Artículo</h2>
+                <form action="/submit-project" method="POST">
+                    <div class="form-group">
+                        <label for="title">Título</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Título de tu proyecto o artículo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea class="form-control" id="description" name="description" placeholder="Descripción detallada del proyecto o artículo" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Categoría</label>
+                        <select class="form-control" id="category" name="category">
+                            <option value="">Selecciona una categoría</option>
+                            <option value="ai-project">Proyecto de IA</option>
+                            <option value="ai-article">Artículo de IA</option>
+                            <option value="ai-news">Noticia de IA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Imagen (opcional)</label>
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Etiquetas (opcional)</label>
+                        <input type="text" class="form-control" id="tags" name="tags" placeholder="Etiquetas separadas por comas (ej: IA, robótica, machine learning)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publicar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-content mt-4">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Redes Sociales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Política de Privacidad</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
