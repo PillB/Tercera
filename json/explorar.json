@@ -1,7 +1,7 @@
 {
     "aiProjects": [
       {
-        "image": "ai-project-1.jpg",
+        "image": "../img/relevant_thoughtprovoking_image_A_and.jpg",
         "alt": "Proyecto de IA para análisis de datos",
         "title": "Análisis de Datos con IA",
         "text": "Enfoque innovador en análisis de datos usando IA."
@@ -9,7 +9,7 @@
     ],
     "aiArticles": [
       {
-        "image": "ai-news-1.jpg",
+        "image": "../img/vivid_engaging_image_A_and.jpg",
         "alt": "Últimas tendencias en IA",
         "title": "Últimas Tendencias en IA",
         "text": "Análisis de tendencias y desarrollos en IA."

@@ -7,6 +7,30 @@
         "comments": 3,
         "visits": 45,
         "favorites": 5
+      },
+      {
+        "title": "Nueva solución IA",
+        "author": "Claudia Ramirez",
+        "likes": 10,
+        "comments": 4,
+        "visits": 40,
+        "favorites": 5
+      },
+      {
+        "title": "Hackaton IA",
+        "author": "Julio Vaca",
+        "likes": 20,
+        "comments": 10,
+        "visits": 5,
+        "favorites": 2
+      },
+      {
+        "title": "Conferencia IA",
+        "author": "Elizabeth Loro",
+        "likes": 5,
+        "comments": 3,
+        "visits": 33,
+        "favorites": 1
       }
     ]
   }
