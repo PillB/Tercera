@@ -1,0 +1,18 @@
+{
+    "featuredProjects": [
+      {
+        "image": "ai-healthcare.jpg",
+        "alt": "AI in Healthcare",
+        "title": "Revolutionizing Healthcare with AI",
+        "text": "Discover how AI is transforming patient care and medical diagnostics."
+      }
+    ],
+    "aiNews": [
+      {
+        "image": "ml-breakthrough.jpg",
+        "alt": "Machine Learning Breakthrough",
+        "title": "New Algorithms Redefine Machine Learning Limits",
+        "text": "Groundbreaking algorithms are pushing the boundaries of machine learning."
+      }
+    ]
+  }

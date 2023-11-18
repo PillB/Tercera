@@ -1,0 +1,27 @@
+[
+    {
+        "image": "placeholder.jpg",
+        "alt": "Descripción del taller 1",
+        "description": "Taller de IA Generativa"
+    },
+    {
+        "image": "placeholder2.jpg",
+        "alt": "Descripción del taller 2",
+        "description": "Taller de IA para la Ciberseguridad"
+    },
+    {
+        "image": "placeholder3.jpg",
+        "alt": "Descripción del taller 3",
+        "description": "Taller de IA para la Salud"
+    },
+    {
+        "image": "placeholder4.jpg",
+        "alt": "Descripción del taller 4",
+        "description": "Taller de IA para la Meteorología"
+    },
+    {
+        "image": "placeholder5.jpg",
+        "alt": "Descripción del taller 5",
+        "description": "Taller de IA para la Automatización"
+    }
+]
