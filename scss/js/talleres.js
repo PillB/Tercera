@@ -5,9 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const container = document.querySelector('.grid-container.items');
             data.forEach(item => {
                 container.innerHTML += `
-                    <div class="item">
-                        <img src="${item.image}" alt="${item.alt}">
-                        <p>${item.description}</p>
+                    <div class="col-md-4 mb-3">
+                        <div class="item card">
+                            <img src="${item.image}" class="card-img-top" alt="${item.alt}">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.title}</h5>
+                                <p class="card-text">${item.text}</p>
+                            </div>
+                        </div>
                     </div>
                 `;
             });

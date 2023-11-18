@@ -29,4 +29,25 @@
             }
         }
     }
+    .item-body {
+        padding: 1rem;
+
+        .item-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .item-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .btn-link {
+            color: #007bff;
+            &:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+        }
+    }
 }

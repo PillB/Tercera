@@ -2,26 +2,31 @@
     {
         "image": "../img/representing_striking_visually_image_A.jpg",
         "alt": "Descripción del taller 1",
-        "description": "Taller de IA Generativa"
+        "title": "Taller de IA Generativa",
+        "text": "Exploraremos técnicas para customizar los modelos de IA Generativa"
     },
     {
         "image": "../img/sophisticated_insightful_image_A_and.jpg",
         "alt": "Descripción del taller 2",
-        "description": "Taller de IA para la Ciberseguridad"
+        "title": "Taller de IA para la Ciberseguridad",
+        "text": "Exploraremos técnicas para customizar los modelos de IA aplicados a la Ciberseguridad"
     },
     {
         "image": "../img/symbolic_thoughtprovoking_image_A_and.jpg",
         "alt": "Descripción del taller 3",
-        "description": "Taller de IA para la Salud"
+        "title": "Taller de IA para la Salud",
+        "text": "Exploraremos técnicas para customizar los modelos de IA aplicados a la Salud"
     },
     {
         "image": "../img/thematic_futuristic_image_A_and.jpg",
         "alt": "Descripción del taller 4",
-        "description": "Taller de IA para la Meteorología"
+        "title": "Taller de IA para la Meteorología",
+        "text": "Exploraremos técnicas para customizar los modelos de IA aplicados a la Meteorología"
     },
     {
         "image": "../img/vibrant_engaging_image_A_and.jpg",
         "alt": "Descripción del taller 5",
-        "description": "Taller de IA para la Automatización"
+        "title": "Taller de IA para la Automatización",
+        "text": "Exploraremos técnicas para customizar los modelos de IA para Automatización"
     }
 ]

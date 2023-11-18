@@ -301,6 +301,24 @@ footer .list-inline .list-inline-item {
   color: #0056b3;
   text-decoration: underline;
 }
+.news-item .item-body, .card .item-body {
+  padding: 1rem;
+}
+.news-item .item-body .item-title, .card .item-body .item-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.news-item .item-body .item-text, .card .item-body .item-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.news-item .item-body .btn-link, .card .item-body .btn-link {
+  color: #007bff;
+}
+.news-item .item-body .btn-link:hover, .card .item-body .btn-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
 
 .table-responsive {
   margin-top: 1rem;
