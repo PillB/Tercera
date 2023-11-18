@@ -1,5 +1,9 @@
+@import 'colores';
+@import 'general';
 @import 'navbar-footer';
 @import 'carousel-grid';
+@import 'footer';
+@import 'header';
 
 // Media Queries for responsive layout
 $breakpoint-sm: 576px;
@@ -34,3 +38,122 @@ $breakpoint-xl: 1200px;
         max-width: 25%;
     }
 }
+
+@import 'components';
+
+// Breakpoints
+$breakpoint-xs: 320px; // Extra small devices
+$breakpoint-sm: 480px; // Small devices
+$breakpoint-md: 768px; // Medium devices
+$breakpoint-lg: 1024px; // Large devices
+$breakpoint-xl: 1200px; // Extra large devices
+
+// Typography and Readability
+@mixin typography-adjustments($fontSize) {
+    body, button, input, textarea {
+        font-size: $fontSize;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+    }
+}
+
+// Images and Media
+@mixin image-media-adjustments {
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Form Elements
+@mixin form-element-adjustments {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    button, input[type="submit"] {
+        padding: 0.5rem 1rem;
+    }
+}
+
+// Extra Small Devices
+@media (max-width: $breakpoint-xs) {
+    @include typography-adjustments(12px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    header, footer {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        .nav-link {
+            padding: 0.5rem;
+        }
+    }
+
+    .carousel, .category, .items {
+        .item, .card {
+            padding: 0.5rem;
+        }
+    }
+}
+
+// Small Devices
+@media (max-width: $breakpoint-sm) {
+    @include typography-adjustments(14px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    // Specific adjustments for small devices...
+}
+
+// Medium Devices
+@media (max-width: $breakpoint-md) {
+    @include typography-adjustments(15px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    .carousel, .category, .items {
+        .item, .card {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+}
+
+// Large Devices
+@media (min-width: $breakpoint-lg) {
+    @include typography-adjustments(16px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    .carousel, .category, .items {
+        .item, .card {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
+}
+
+// Extra Large Devices
+@media (min-width: $breakpoint-xl) {
+    @include typography-adjustments(17px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    .carousel, .category, .items {
+        .item, .card {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+}            
