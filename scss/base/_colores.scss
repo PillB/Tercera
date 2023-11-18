@@ -1,0 +1,84 @@
+// Primary Color Palette
+$color-primary: #5CACEE;   // Light Blue
+$color-primary-dark: #357ABD;   // Darker Shade of Blue
+$color-secondary: #C0C0C0; // Silver
+
+// Neutral Colors
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-gray-light: #F5F5F5; // Light Gray for backgrounds
+$color-gray: #808080;      // Mid Gray for text
+$color-gray-dark: #404040; // Dark Gray for headings
+
+// Utility Colors
+$color-success: #4CAF50;   // Green for success messages
+$color-warning: #FFC107;   // Yellow for warning messages
+$color-error: #F44336;     // Red for error messages
+$color-info: #2196F3;      // Blue for informational messages
+
+// Gradient (Optional)
+$gradient-primary: linear-gradient(45deg, $color-primary, $color-primary-dark);
+
+// Text Colors
+$text-color: $color-gray-dark;
+$text-color-light: $color-gray;
+
+// Background Colors
+$background-color: $color-white;
+$background-color-light: $color-gray-light;
+
+// Border Colors
+$border-color: $color-gray;
+
+// Button Colors
+$button-color: $color-primary;
+$button-hover-color: darken($color-primary, 10%);
+$button-text-color: $color-white;
+
+// Link Colors
+$link-color: $color-primary;
+$link-hover-color: darken($color-primary, 10%);
+
+// Footer and Header
+$footer-background-color: $color-primary;
+$header-background-color: $color-primary;
+
+// AI Inspired Accent
+$ai-accent: #7F7FD5; // Soft Purple for an innovative and tech-inspired feel
+
+$theme-colors: (
+  "primary": $color-primary,
+  "primary-dark": $color-primary-dark,
+  "secondary": $color-secondary,
+  // Add other Bootstrap colors as needed
+);
+
+$btn-primary-bg: $color-primary;
+$btn-primary-border: $color-primary-dark;
+
+// Accesibility
+@mixin contrast-color($background-color) {
+    @if (lightness($background-color) > 60%) {
+      @return $color-black; // Dark text on light background
+    } @else {
+      @return $color-white; // Light text on dark background
+    }
+  }
+
+$link-hover-opacity: 0.8;
+$button-active-bg: darken($color-primary, 15%);
+  
+$body-bg: $background-color;
+$body-color: $text-color;
+
+.bg-primary {
+    background-color: $color-primary !important;
+}
+.text-primary {
+color: $color-primary !important;
+}
+.border-primary {
+border-color: $color-primary !important;
+}
+  
+
