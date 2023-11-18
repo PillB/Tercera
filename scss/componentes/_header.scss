@@ -1,0 +1,41 @@
+@import 'colores';
+@import 'general';
+
+.header-content {
+    background-color: $header-background-color;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 2rem;
+        color: $text-color-light;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+
+            li {
+                a {
+                    color: $text-color-light;
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+
+                    &:hover {
+                        background-color: $link-hover-color;
+                        border-radius: 5px;
+                    }
+
+                    &.active {
+                        background-color: $link-color;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
