@@ -1,0 +1,34 @@
+@import 'colores';
+@import 'general';
+
+// Navbar and Footer with Bootstrap classes
+header, footer {
+    background-color: $secondary-color;
+    padding: $base-padding;
+    text-align: center;
+
+    .navbar {
+        justify-content: space-between;
+
+        .nav-link {
+            color: $accent-color;
+
+            &.active {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+// Footer specific styles
+footer {
+    .list-inline {
+        padding-left: 0;
+        list-style: none;
+
+        .list-inline-item {
+            display: inline;
+            margin-right: .5rem;
+        }
+    }
+}
