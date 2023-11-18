@@ -1,9 +1,9 @@
-@import 'colores';
-@import 'general';
+@import '../base/colores';
+@import '../base/general';
 
 // Navbar and Footer with Bootstrap classes
 header, footer {
-    background-color: $secondary-color;
+    background-color: $color-secondary;
     padding: $base-padding;
     text-align: center;
 
@@ -14,7 +14,7 @@ header, footer {
             color: $accent-color;
 
             &.active {
-                color: $primary-color;
+                color: $color-primary;
             }
         }
     }

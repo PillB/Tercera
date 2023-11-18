@@ -1,5 +1,5 @@
-@import 'colores';
-@import 'general';
+@import '../base/colores';
+@import '../base/general';
 @import 'navbar-footer';
 
 footer {
@@ -34,13 +34,3 @@ footer {
     }
 }
 
-// Responsive adjustments
-@media (max-width: $breakpoint-md) {
-    footer .footer-content {
-        flex-direction: column;
-
-        nav ul {
-            flex-direction: column;
-        }
-    }
-}
