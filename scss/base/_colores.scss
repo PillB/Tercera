@@ -58,13 +58,20 @@ $btn-primary-bg: $color-primary;
 $btn-primary-border: $color-primary-dark;
 
 // Accesibility
+// Accesibility
 @mixin contrast-color($background-color) {
     @if (lightness($background-color) > 60%) {
-      @return $color-black; // Dark text on light background
+        color: $color-black; // Dark text on light background
     } @else {
-      @return $color-white; // Light text on dark background
+        color: $color-white; // Light text on dark background
     }
-  }
+}
+
+button {
+    background-color: $color-primary;
+    @include contrast-color($color-primary);
+}
+
 
 $link-hover-opacity: 0.8;
 $button-active-bg: darken($color-primary, 15%);
