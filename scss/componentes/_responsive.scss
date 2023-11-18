@@ -1,0 +1,347 @@
+@import 'colores';
+@import 'general';
+@import 'navbar-footer';
+@import 'carousel-grid';
+@import 'footer';
+@import 'header';
+
+// Breakpoints
+$breakpoint-xs: 320px; // Extra small devices
+$breakpoint-sm: 480px; // Small devices
+$breakpoint-md: 768px; // Medium devices
+$breakpoint-lg: 1024px; // Large devices
+$breakpoint-xl: 1200px; // Extra large devices
+
+// Typography and Readability
+@mixin typography-adjustments($fontSize) {
+    body, button, input, textarea {
+        font-size: $fontSize;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+    }
+}
+
+// Images and Media
+@mixin image-media-adjustments {
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Form Elements
+@mixin form-element-adjustments {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    button, input[type="submit"] {
+        padding: 0.5rem 1rem;
+    }
+}
+
+// Extra Small Devices
+@media (max-width: $breakpoint-xs) {
+    @include typography-adjustments(12px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    // Navbar adjustments
+    .navbar {
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            padding: 0.75rem;
+        }
+    }
+
+    // Header and Footer adjustments
+    header, footer {
+        padding: 1rem 1.5rem;
+        .container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // Carousel and Grid adjustments
+    .carousel, .category {
+        .items {
+            grid-template-columns: repeat(2, 1fr); // Two-column layout
+            gap: 1rem;
+        }
+        .item, .card {
+            padding: 0.75rem;
+        }
+    }
+
+    // Form Controls adjustments
+    .form-control, .form-group {
+        margin-bottom: 1rem;
+    }
+
+    // Button adjustments
+    .btn {
+        padding: 0.75rem 1.5rem;
+    }
+
+    // Image adjustments for better responsiveness
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Small Devices
+@media (max-width: $breakpoint-sm) {
+    @include typography-adjustments(14px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    // Navbar adjustments
+    .navbar {
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            padding: 0.75rem;
+        }
+    }
+
+    // Header and Footer adjustments
+    header, footer {
+        padding: 0.75rem 1rem;
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // Carousel and Grid adjustments
+    .carousel, .category {
+        .items {
+            grid-template-columns: 1fr; // Single column layout
+            gap: 1rem;
+        }
+        .item, .card {
+            padding: 0.5rem;
+        }
+    }
+
+    // Form Controls adjustments
+    .form-control, .form-group {
+        margin-bottom: 1rem;
+    }
+
+    // Button adjustments
+    .btn {
+        padding: 0.75rem 1.5rem;
+    }
+
+    // Image adjustments for better responsiveness
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Medium Devices
+@media (max-width: $breakpoint-md) {
+    @include typography-adjustments(15px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    .carousel, .category, .items {
+        .item, .card {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    // Navbar adjustments
+    .navbar {
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            padding: 0.75rem;
+        }
+    }
+
+    // Header and Footer adjustments
+    header, footer {
+        padding: 1rem 1.5rem;
+        .container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // Carousel and Grid adjustments
+    .carousel, .category {
+        .items {
+            grid-template-columns: repeat(2, 1fr); // Two-column layout
+            gap: 1rem;
+        }
+        .item, .card {
+            padding: 0.75rem;
+        }
+    }
+
+    // Form Controls adjustments
+    .form-control, .form-group {
+        margin-bottom: 1rem;
+    }
+
+    // Button adjustments
+    .btn {
+        padding: 0.75rem 1.5rem;
+    }
+
+    // Image adjustments for better responsiveness
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Large Devices
+@media (min-width: $breakpoint-lg) {
+    @include typography-adjustments(16px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    .carousel, .category, .items {
+        .item, .card {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
+    // Navbar adjustments
+    .navbar {
+        .nav-item {
+            margin: 0 1rem;
+        }
+        .nav-link {
+            padding: 1rem;
+        }
+    }
+
+    // Header and Footer adjustments
+    header, footer {
+        padding: 1.5rem 2rem;
+        .container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // Carousel and Grid adjustments
+    .carousel, .category {
+        .items {
+            grid-template-columns: repeat(3, 1fr); // Three-column layout
+            gap: 1.5rem;
+        }
+        .item, .card {
+            padding: 1rem;
+        }
+    }
+
+    // Form Controls adjustments
+    .form-control, .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    // Button adjustments
+    .btn {
+        padding: 1rem 2rem;
+    }
+
+    // Image adjustments for better responsiveness
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    // Additional adjustments for large screens
+    .publication-list article, .topic-list .topic {
+        // Layout adjustments for larger content areas
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Extra Large Devices
+@media (min-width: $breakpoint-xl) {
+    @include typography-adjustments(17px);
+    @include image-media-adjustments;
+    @include form-element-adjustments;
+
+    .carousel, .category, .items {
+        .item, .card {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        // Navbar adjustments
+        .navbar {
+            .nav-item {
+                margin: 0 1.5rem;
+            }
+            .nav-link {
+                padding: 1rem 1.5rem;
+            }
+        }
+    
+        // Header and Footer adjustments
+        header, footer {
+            padding: 2rem 3rem;
+            .container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    
+        // Carousel and Grid adjustments
+        .carousel, .category {
+            .items {
+                grid-template-columns: repeat(4, 1fr); // Four-column layout
+                gap: 2rem;
+            }
+            .item, .card {
+                padding: 1.5rem;
+            }
+        }
+    
+        // Form Controls adjustments
+        .form-control, .form-group {
+            margin-bottom: 2rem;
+        }
+    
+        // Button adjustments
+        .btn {
+            padding: 1.5rem 2.5rem;
+        }
+    
+        // Image adjustments for better responsiveness
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        // Additional adjustments for extra-large screens
+        .publication-list article, .topic-list .topic {
+            // Layout adjustments for larger content areas
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}            
+
