@@ -1,0 +1,16 @@
+// main.scss
+
+// Base styles and variables
+@import 'base/colores';
+@import 'base/general';
+
+// Components
+@import 'components/navbar-footer';
+@import 'components/maps';
+@import 'components/forms';
+@import 'components/news-articles';
+@import 'components/community-table';
+@import 'components/carousel-grid';
+@import 'components/footer';
+@import 'components/header';
+@import 'base/responsive.scss';
