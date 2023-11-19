@@ -204,6 +204,138 @@ a:hover {
   color: #ccc;
 }
 
+.filter-toggle {
+  background-color: #5CACEE;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.filter-toggle:hover {
+  background-color: #357ABD;
+  color: #FFFFFF;
+}
+.filter-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 172, 238, 0.5);
+}
+@media (max-width: 768px) {
+  .filter-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+.filter-toggle-icon {
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: #5CACEE;
+  color: #000000;
+}
+
+.bg-primary {
+  background-color: #5CACEE !important;
+}
+
+.text-primary {
+  color: #5CACEE !important;
+}
+
+.border-primary {
+  border-color: #5CACEE !important;
+}
+
+button {
+  background-color: #5CACEE;
+  color: #000000;
+}
+
+.bg-primary {
+  background-color: #5CACEE !important;
+}
+
+.text-primary {
+  color: #5CACEE !important;
+}
+
+.border-primary {
+  border-color: #5CACEE !important;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #F5F5F5;
+  color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #404040;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: #5CACEE;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #2e94e9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content, .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: lightblue;
+}
+
+.navbar ul.nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.navbar ul.nav .nav-item + .navbar ul.nav .nav-item {
+  margin-left: 1rem;
+}
+.navbar ul.nav .nav-item .nav-link {
+  color: #fff;
+}
+.navbar ul.nav .nav-item .nav-link:hover {
+  color: #ccc;
+}
+
 header, footer {
   background-color: #C0C0C0;
   padding: 0;

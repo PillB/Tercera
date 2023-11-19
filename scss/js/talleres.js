@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const container = document.querySelector('.grid-container.items');
             data.forEach(item => {
                 container.innerHTML += `
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4 mb-3" data-topic="${item.topic}">
                         <div class="item card">
                             <img src="${item.image}" class="card-img-top" alt="${item.alt}">
                             <div class="card-body">
@@ -19,3 +19,46 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error:', error));
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle filter section
+    document.querySelector('.filter-toggle').addEventListener('click', () => {
+        document.getElementById('workshopFilters').style.display = 
+            document.getElementById('workshopFilters').style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Filter functionality
+    document.getElementById('topic').addEventListener('change', function() {
+        filterWorkshops();
+    });
+
+    function filterWorkshops() {
+        const selectedTopic = document.getElementById('topic').value;
+        const workshops = document.querySelectorAll('.col-md-4');
+
+        workshops.forEach(workshop => {
+            const topic = workshop.getAttribute('data-topic'); // Assuming each workshop has a data-topic attribute
+            if (selectedTopic === 'all' || topic === selectedTopic) {
+                workshop.style.display = '';
+            } else {
+                workshop.style.display = 'none';
+            }
+        });
+    }
+});
+
+// Function to populate topic filter options
+function populateTopicFilter(data) {
+    const topicSet = new Set();
+    data.forEach(workshop => {
+        topicSet.add(workshop.topic);
+    });
+
+    const topicSelect = document.getElementById('topic');
+    topicSet.forEach(topic => {
+        const option = document.createElement('option');
+        option.value = topic;
+        option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1); // Capitalize first letter
+        topicSelect.appendChild(option);
+    });
+}

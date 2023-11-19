@@ -46,9 +46,27 @@
                 <h2>Talleres Destacados</h2>
                 <button class="filter-toggle">☰ Filtros</button>
             </div>
+            <!-- Filter Section -->
+            <div class="filters" id="workshopFilters" style="display: none;">
+                <h3>Filtros</h3>
+                <div class="filter-option">
+                    <label for="topic">Tema:</label>
+                    <select id="topic">
+                        <option value="all">Todos</option>
+                        <option value="cybersecurity">Ciberseguridad</option>
+                        <option value="generative">Salud</option>
+                        <option value="healthcare">Salud</option>
+                        <option value="investment">Inversión</option>
+                        <option value="research">Inversión</option>
+                        <!-- More options... -->
+                    </select>
+                </div>
+                <!-- Additional filters like difficulty, location, etc., can be added here -->
+            </div>
+            <!-- Existing workshop items... -->
             <div class="row">
                 <!-- Example Workshop Items -->
-                <div class="col-md-4 mb-3"> <!-- Each card is now a column -->
+                <div class="col-md-4 mb-3" data-topic="generative"> <!-- Each card is now a column -->
                     <div class="card"> <!-- Card class for styling -->
                         <img src="../img/compelling_thematic_visually_A.jpg" alt="Descripción del taller 1" class="card-img-top">
                         <div class="card-body">
@@ -56,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3"> <!-- Each card is now a column -->
+                <div class="col-md-4 mb-3" data-topic="cybersecurity"> <!-- Each card is now a column -->
                     <div class="card"> <!-- Card class for styling -->
                         <img src="../img/creative_compelling_visually_A.jpg" alt="Descripción del taller 2" class="card-img-top">
                         <div class="card-body">
@@ -64,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3"> <!-- Each card is now a column -->
+                <div class="col-md-4 mb-3" data-topic="investment"> <!-- Each card is now a column -->
                     <div class="card"> <!-- Card class for styling -->
                         <img src="../img/detailed_thematic_image_A_and.jpg" alt="Descripción del taller 3" class="card-img-top">
                         <div class="card-body">
@@ -72,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3"> <!-- Each card is now a column -->
+                <div class="col-md-4 mb-3" data-topic="healthcare"> <!-- Each card is now a column -->
                     <div class="card"> <!-- Card class for styling -->
                         <img src="../img/dynamic_futuristic_image_A_and.jpg" alt="Descripción del taller 4" class="card-img-top">
                         <div class="card-body">
@@ -80,11 +98,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3"> <!-- Each card is now a column -->
+                <div class="col-md-4 mb-3" data-topic="research"> <!-- Each card is now a column -->
                     <div class="card"> <!-- Card class for styling -->
                         <img src="../img/educationalthemed_dynamic_image_A_and.jpg" alt="Descripción del taller 5" class="card-img-top">
                         <div class="card-body">
-                            <p class="card-text">Taller de IA para la Salud</p>
+                            <p class="card-text">Taller de IA para la Investigación</p>
                         </div>
                     </div>
                 </div>
