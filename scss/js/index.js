@@ -2,36 +2,59 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('json/index.json')
         .then(response => response.json())
         .then(data => {
-            const projectContainer = document.querySelector('.featured-projects .row');
-            const newsContainer = document.querySelector('.latest-news .row');
+            const projectCarousel = document.querySelector('#featuredProjectsCarousel .carousel-inner');
+            const newsCarousel = document.querySelector('#aiNewsCarousel .carousel-inner');
 
-            data.featuredProjects.forEach(project => {
-                projectContainer.innerHTML += `
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="${project.image}" class="card-img-top" alt="${project.alt}">
-                            <div class="card-body">
-                                <h5 class="card-title">${project.title}</h5>
-                                <p class="card-text">${project.text}</p>
-                                <a href="#" class="btn btn-secondary">Read More</a>
+            // Function to create carousel items
+            function createCarouselItems(items, container, isProject = true) {
+                let carouselHTML = '';
+                let rowContent = '';
+                let itemCount = 0;
+
+                items.forEach((item, index) => {
+                    // Start a new row for every 3 items
+                    if (itemCount === 0) {
+                        rowContent = `<div class="row">`;
+                    }
+
+                    // Add the item to the row
+                    rowContent += isProject ? `
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="${item.image}" class="card-img-top" alt="${item.alt}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.title}</h5>
+                                    <p class="card-text">${item.text}</p>
+                                    <a href="#" class="btn btn-secondary">Read More</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                `;
-            });
-
-            data.aiNews.forEach(news => {
-                newsContainer.innerHTML += `
-                    <div class="col-md-4">
-                        <div class="news-item">
-                            <img src="${news.image}" alt="${news.alt}">
-                            <h5>${news.title}</h5>
-                            <p>${news.text}</p>
-                            <a href="#" class="btn btn-link">Read More</a>
+                    ` : `
+                        <div class="col-md-4">
+                            <div class="news-item card">
+                                <img src="${item.image}" alt="${item.alt}">
+                                <h5>${item.title}</h5>
+                                <p>${item.text}</p>
+                                <a href="#" class="btn btn-link">Read More</a>
+                            </div>
                         </div>
-                    </div>
-                `;
-            });
+                    `;
+
+                    itemCount++;
+
+                    // Close the row and add to carouselHTML after every 3 items or at the end
+                    if (itemCount === 3 || index === items.length - 1) {
+                        rowContent += `</div>`; // Close the row
+                        carouselHTML += `<div class="carousel-item ${index < 3 ? 'active' : ''}">${rowContent}</div>`;
+                        itemCount = 0; // Reset item count for the next row
+                    }
+                });
+
+                container.innerHTML = carouselHTML;
+            }
+
+            createCarouselItems(data.featuredProjects, projectCarousel, true);
+            createCarouselItems(data.aiNews, newsCarousel, false);
         })
         .catch(error => console.error('Error:', error));
 });
