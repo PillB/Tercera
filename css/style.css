@@ -581,11 +581,10 @@ a:hover {
 .carousel, .grid-container {
   margin-bottom: 1rem;
 }
-.carousel .carousel-control-prev, .grid-container .carousel-control-prev {
+.carousel .carousel-control-prev, .carousel .carousel-control-next, .grid-container .carousel-control-prev, .grid-container .carousel-control-next {
   color: #5CACEE;
-}
-.carousel .carousel-control-next, .grid-container .carousel-control-next {
-  color: #5CACEE;
+  background-color: rgba(53, 122, 189, 0.5);
+  padding: 0.1rem;
 }
 .carousel .card, .grid-container .card {
   background-color: #F5F5F5;
@@ -1318,11 +1317,10 @@ a:hover {
 .carousel, .grid-container {
   margin-bottom: 1rem;
 }
-.carousel .carousel-control-prev, .grid-container .carousel-control-prev {
+.carousel .carousel-control-prev, .carousel .carousel-control-next, .grid-container .carousel-control-prev, .grid-container .carousel-control-next {
   color: #5CACEE;
-}
-.carousel .carousel-control-next, .grid-container .carousel-control-next {
-  color: #5CACEE;
+  background-color: rgba(53, 122, 189, 0.5);
+  padding: 0.1rem;
 }
 .carousel .card, .grid-container .card {
   background-color: #F5F5F5;
