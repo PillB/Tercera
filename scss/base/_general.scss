@@ -11,16 +11,16 @@ html {
     box-sizing: inherit;
 }
 
-//body {
-//    display: flex;
-//    flex-direction: column;
-//    min-height: 100vh;
-//    margin: 0;
-//    padding: 0;
-//    font-family: 'Roboto', sans-serif;
-//    background-color: $background-color-light; // Utilize color variable for consistency
-//    color: $text-color; // Default text color
-//}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color-light; // Utilize color variable for consistency
+    color: $text-color; // Default text color
+}
 
 // SEO-friendly Typography
 h1, h2, h3, h4, h5, h6 {
@@ -42,13 +42,13 @@ a {
     }
 }
 
-//.container {
-//    max-width: 1200px;
-//    margin: 0 auto;
-//    padding: 15px;
-//    display: flex;
-//   flex-direction: column;
-//}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+   flex-direction: column;
+}
 
 .header-content, .footer-content {
     display: flex;

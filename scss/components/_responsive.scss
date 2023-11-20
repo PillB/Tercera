@@ -22,13 +22,6 @@ $breakpoint-xl: 1200px; // Extra large devices
     }
 }
 
-// Images and Media
-@mixin image-media-adjustments {
-    img, video {
-        max-width: 100%;
-        height: auto;
-    }
-}
 
 // Form Elements
 @mixin form-element-adjustments {
@@ -93,11 +86,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         padding: 0.75rem 1.5rem;
     }
 
-    // Image adjustments for better responsiveness
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 // Small Devices
@@ -146,11 +134,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         padding: 0.75rem 1.5rem;
     }
 
-    // Image adjustments for better responsiveness
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 // Medium Devices
@@ -159,12 +142,7 @@ $breakpoint-xl: 1200px; // Extra large devices
     @include image-media-adjustments;
     @include form-element-adjustments;
 
-    .carousel, .category, .items {
-        .item, .card {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-    }
+
     // Navbar adjustments
     .navbar {
         .nav-item {
@@ -185,16 +163,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         }
     }
 
-    // Carousel and Grid adjustments
-    .carousel, .category {
-        .items {
-            grid-template-columns: repeat(2, 1fr); // Two-column layout
-            gap: 1rem;
-        }
-        .item, .card {
-            padding: 0.75rem;
-        }
-    }
 
     // Form Controls adjustments
     .form-control, .form-group {
@@ -206,11 +174,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         padding: 0.75rem 1.5rem;
     }
 
-    // Image adjustments for better responsiveness
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 // Large Devices
@@ -219,12 +182,6 @@ $breakpoint-xl: 1200px; // Extra large devices
     @include image-media-adjustments;
     @include form-element-adjustments;
 
-    .carousel, .category, .items {
-        .item, .card {
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
-    }
     // Navbar adjustments
     .navbar {
         .nav-item {
@@ -245,17 +202,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         }
     }
 
-    // Carousel and Grid adjustments
-    .carousel, .category {
-        .items {
-            grid-template-columns: repeat(3, 1fr); // Three-column layout
-            gap: 1.5rem;
-        }
-        .item, .card {
-            padding: 1rem;
-        }
-    }
-
     // Form Controls adjustments
     .form-control, .form-group {
         margin-bottom: 1.5rem;
@@ -266,11 +212,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         padding: 1rem 2rem;
     }
 
-    // Image adjustments for better responsiveness
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 
     // Additional adjustments for large screens
     .publication-list article, .topic-list .topic {
@@ -286,10 +227,7 @@ $breakpoint-xl: 1200px; // Extra large devices
     @include form-element-adjustments;
 
     .carousel, .category, .items {
-        .item, .card {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
+
         // Navbar adjustments
         .navbar {
             .nav-item {
@@ -329,12 +267,6 @@ $breakpoint-xl: 1200px; // Extra large devices
         // Button adjustments
         .btn {
             padding: 1.5rem 2.5rem;
-        }
-    
-        // Image adjustments for better responsiveness
-        img {
-            max-width: 100%;
-            height: auto;
         }
     
         // Additional adjustments for extra-large screens

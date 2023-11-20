@@ -10,13 +10,6 @@
         border: none;
         border-radius: .25rem;
 
-        .card-img-top {
-            width: 100%;
-            height: auto;
-            border-top-left-radius: calc(.25rem - 1px);
-            border-top-right-radius: calc(.25rem - 1px);
-        }
-
         .card-body {
             padding: 1rem;
             color: $accent-color;
