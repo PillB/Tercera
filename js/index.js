@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const projectCarousel = document.querySelector('#featuredProjectsCarousel .carousel-inner');
             const newsCarousel = document.querySelector('#aiNewsCarousel .carousel-inner');
 
-            // Function to create carousel items
+            // Function to create carousel items v2
             function createCarouselItems(items, container, isProject = true) {
                 let carouselHTML = '';
                 let rowContent = '';
