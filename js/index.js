@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <img src="${item.image}" alt="${item.alt}">
                                 <h5>${item.title}</h5>
                                 <p>${item.text}</p>
-                                <a href="#" class="btn btn-link">Read More</a>
+                                <a href="#" class="btn btn-secondary">Read More</a>
                             </div>
                         </div>
                     `;

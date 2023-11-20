@@ -1761,9 +1761,6 @@ a:hover {
   .form-control, .form-group {
     margin-bottom: 1rem;
   }
-  .btn {
-    padding: 0.75rem 1.5rem;
-  }
 }
 @media (max-width: 480px) {
   body, button, input, textarea {
@@ -1807,9 +1804,6 @@ a:hover {
   .form-control, .form-group {
     margin-bottom: 1rem;
   }
-  .btn {
-    padding: 0.75rem 1.5rem;
-  }
 }
 @media (max-width: 768px) {
   body, button, input, textarea {
@@ -1847,9 +1841,6 @@ a:hover {
   .form-control, .form-group {
     margin-bottom: 1rem;
   }
-  .btn {
-    padding: 0.75rem 1.5rem;
-  }
 }
 @media (min-width: 1024px) {
   body, button, input, textarea {
@@ -1886,9 +1877,6 @@ a:hover {
   }
   .form-control, .form-group {
     margin-bottom: 1.5rem;
-  }
-  .btn {
-    padding: 1rem 2rem;
   }
   .publication-list article, .topic-list .topic {
     grid-template-columns: repeat(4, 1fr);
@@ -1936,9 +1924,6 @@ a:hover {
   }
   .carousel .form-control, .carousel .form-group, .category .form-control, .category .form-group, .items .form-control, .items .form-group {
     margin-bottom: 2rem;
-  }
-  .carousel .btn, .category .btn, .items .btn {
-    padding: 1.5rem 2.5rem;
   }
   .carousel .publication-list article, .carousel .topic-list .topic, .category .publication-list article, .category .topic-list .topic, .items .publication-list article, .items .topic-list .topic {
     grid-template-columns: repeat(5, 1fr);
