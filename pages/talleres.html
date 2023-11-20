@@ -9,20 +9,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>CrearIA - Talleres</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            var mapOptions = {
-                zoom: 8,
-                center: { lat: -34.397, lng: 150.644 }, // Example coordinates
-            };
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-            // Add markers for each workshop location
-            // Example: new google.maps.Marker({ position: { lat: -34.397, lng: 150.644 }, map: map });
-            // Add more markers as needed
-        }
-    </script>
 </head>
 <body>
     <header class="header-content">
@@ -125,6 +111,7 @@
         </div>
     </footer>
     <!-- Custom Script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> <!-- Needs an API key-->
     <script src="../js/talleres.js"></script> <!-- Include your talleres.js file here -->
 </body>
 </html>
