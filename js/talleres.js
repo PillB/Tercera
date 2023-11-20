@@ -18,13 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch(error => console.error('Error:', error));
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     // Toggle filter section
     document.querySelector('.filter-toggle').addEventListener('click', () => {
-        document.getElementById('workshopFilters').style.display = 
-            document.getElementById('workshopFilters').style.display === 'none' ? 'block' : 'none';
+        const filters = document.getElementById('workshopFilters');
+        filters.style.display = filters.style.display === 'none' ? 'block' : 'none';
     });
 
     // Filter functionality
@@ -37,28 +35,30 @@ document.addEventListener('DOMContentLoaded', function() {
         const workshops = document.querySelectorAll('.col-md-4');
 
         workshops.forEach(workshop => {
-            const topic = workshop.getAttribute('data-topic'); // Assuming each workshop has a data-topic attribute
-            if (selectedTopic === 'all' || topic === selectedTopic) {
+            const topic = workshop.getAttribute('data-topic');
+            if ((selectedTopic === 'all') || (topic === selectedTopic)) {
                 workshop.style.display = '';
             } else {
                 workshop.style.display = 'none';
-            }
+            };
+        })
+    }
+
+    // Function to populate topic filter options
+    function populateTopicFilter(data) {
+        const topicSet = new Set();
+        data.forEach(workshop => {
+            topicSet.add(workshop.topic);
+        });
+
+        const topicSelect = document.getElementById('topic');
+        topicSet.forEach(topic => {
+            const option = document.createElement('option');
+            option.value = topic;
+            option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1); // Capitalize first letter
+            topicSelect.appendChild(option);
         });
     }
 });
 
-// Function to populate topic filter options
-function populateTopicFilter(data) {
-    const topicSet = new Set();
-    data.forEach(workshop => {
-        topicSet.add(workshop.topic);
-    });
 
-    const topicSelect = document.getElementById('topic');
-    topicSet.forEach(topic => {
-        const option = document.createElement('option');
-        option.value = topic;
-        option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1); // Capitalize first letter
-        topicSelect.appendChild(option);
-    });
-}
