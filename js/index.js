@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let carouselHTML = '';
                 let rowContent = '';
                 let itemCount = 0;
+                let isFirstItem = container.children.length === 0; // Check if there are pre-existing items
 
                 items.forEach((item, index) => {
                     // Start a new row for every 3 items
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <img src="${item.image}" alt="${item.alt}">
                                 <h5>${item.title}</h5>
                                 <p>${item.text}</p>
-                                <a href="#" class="btn btn-secondary">Read More</a>
+                                <a href="#" class="btn btn-link">Read More</a>
                             </div>
                         </div>
                     `;
@@ -45,12 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Close the row and add to carouselHTML after every 3 items or at the end
                     if (itemCount === 3 || index === items.length - 1) {
                         rowContent += `</div>`; // Close the row
-                        carouselHTML += `<div class="carousel-item ${index < 3 ? 'active' : ''}">${rowContent}</div>`;
+                        carouselHTML += `<div class="carousel-item ${isFirstItem && index < 3 ? 'active' : ''}">${rowContent}</div>`;
+                        isFirstItem = false;
                         itemCount = 0; // Reset item count for the next row
                     }
                 });
 
-                container.innerHTML = carouselHTML;
+                container.innerHTML += carouselHTML;
             }
 
             createCarouselItems(data.featuredProjects, projectCarousel, true);
