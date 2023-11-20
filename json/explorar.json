@@ -3,16 +3,16 @@
       {
         "image": "../img/relevant_thoughtprovoking_image_A_and.jpg",
         "alt": "Proyecto de IA para análisis de datos",
-        "title": "Análisis de Datos con IA",
-        "text": "Enfoque innovador en análisis de datos usando IA."
+        "title": "Exploración de Datos con IA",
+        "text": "Enfoque innovador en exploración de datos usando IA."
       }
     ],
     "aiArticles": [
       {
         "image": "../img/vivid_engaging_image_A_and.jpg",
-        "alt": "Últimas tendencias en IA",
-        "title": "Últimas Tendencias en IA",
-        "text": "Análisis de tendencias y desarrollos en IA."
+        "alt": "Últimas tendencias en Visión Computacional",
+        "title": "Últimas Tendencias en CV",
+        "text": "Análisis de tendencias y desarrollos en Visión Computacional."
       }
     ]
   }

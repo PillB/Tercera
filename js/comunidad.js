@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('json/comunidad.json')
+    fetch('../json/comunidad.json')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('.table tbody');

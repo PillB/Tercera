@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('json/explorar.json')
+    fetch('../json/explorar.json')
         .then(response => response.json())
         .then(data => {
-            const projectsContainer = document.querySelector('.carousel:first-of-type .row');
-            const articlesContainer = document.querySelector('.carousel:last-of-type .row');
+            const projectsContainer = document.querySelector('.carousel:first-of-type > .row');
+            const articlesContainer = document.querySelector('.carousel:last-of-type > .row');
 
             data.aiProjects.forEach(project => {
                 projectsContainer.innerHTML += `

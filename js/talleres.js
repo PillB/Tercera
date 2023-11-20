@@ -2,11 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('../json/talleres.json')
         .then(response => response.json())
         .then(data => {
-            const container = document.querySelector('.grid-container.items');
+            // Correct the selector to match the HTML structure.
+            // The container is the direct parent of the workshop items.
+            const container = document.querySelector('.carousel > .row');
+
+            // Check if container is found
+            if (!container) {
+                console.error('Container not found for workshops');
+                return;
+            }
+
+            // Adding each item to the container
             data.forEach(item => {
                 container.innerHTML += `
-                    <div class="col-md-4 mb-3" data-topic="${item.topic}">
-                        <div class="item card">
+                    <div class="col-md-4 mb-3" data-topic="${item.topic.toLowerCase()}"> 
+                        <div class="card">
                             <img src="${item.image}" class="card-img-top" alt="${item.alt}">
                             <div class="card-body">
                                 <h5 class="card-title">${item.title}</h5>
@@ -16,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
             });
+            // Function to populate topic filter options
+            populateTopicFilter(data);    
+            filterWorkshops();
+            initMap();  
         })
         .catch(error => console.error('Error:', error));
 
@@ -46,18 +60,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to populate topic filter options
     function populateTopicFilter(data) {
-        const topicSet = new Set();
-        data.forEach(workshop => {
-            // Convert topic to lower case before adding to set
-            topicSet.add(workshop.topic.toLowerCase());
+        const topicSelect = document.getElementById('topic');
+        const existingOptions = new Set();
+    
+        // Collect existing topics from HTML
+        document.querySelectorAll('#topic option').forEach(option => {
+            if (option.value && option.value !== 'all') {
+                existingOptions.add(option.value.toLowerCase());
+            }
         });
     
-        const topicSelect = document.getElementById('topic');
-        topicSet.forEach(topic => {
+        // Add new topics from JSON data
+        data.forEach(workshop => {
+            existingOptions.add(workshop.topic.toLowerCase());
+        });
+    
+        // Clear existing options except the 'all' option
+        topicSelect.innerHTML = '<option value="all">Todos</option>';
+    
+        // Populate the dropdown with combined unique topics
+        existingOptions.forEach(topic => {
             const option = document.createElement('option');
             option.value = topic;
-            // Capitalize first letter for display
-            option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1);
+            option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1); // Capitalize first letter for display
             topicSelect.appendChild(option);
         });
     }
