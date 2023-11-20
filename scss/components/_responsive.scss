@@ -42,7 +42,6 @@ $breakpoint-xl: 1200px; // Extra large devices
 // Extra Small Devices
 @media (max-width: $breakpoint-xs) {
     @include typography-adjustments(12px);
-    @include image-media-adjustments;
     @include form-element-adjustments;
 
     // Navbar adjustments
@@ -91,7 +90,6 @@ $breakpoint-xl: 1200px; // Extra large devices
 // Small Devices
 @media (max-width: $breakpoint-sm) {
     @include typography-adjustments(14px);
-    @include image-media-adjustments;
     @include form-element-adjustments;
 
     // Navbar adjustments
@@ -139,7 +137,6 @@ $breakpoint-xl: 1200px; // Extra large devices
 // Medium Devices
 @media (max-width: $breakpoint-md) {
     @include typography-adjustments(15px);
-    @include image-media-adjustments;
     @include form-element-adjustments;
 
 
@@ -179,7 +176,6 @@ $breakpoint-xl: 1200px; // Extra large devices
 // Large Devices
 @media (min-width: $breakpoint-lg) {
     @include typography-adjustments(16px);
-    @include image-media-adjustments;
     @include form-element-adjustments;
 
     // Navbar adjustments
@@ -223,7 +219,6 @@ $breakpoint-xl: 1200px; // Extra large devices
 // Extra Large Devices
 @media (min-width: $breakpoint-xl) {
     @include typography-adjustments(17px);
-    @include image-media-adjustments;
     @include form-element-adjustments;
 
     .carousel, .category, .items {

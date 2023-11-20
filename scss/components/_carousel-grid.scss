@@ -4,7 +4,12 @@
 // Carousel and Grid with Bootstrap and custom styles
 .carousel, .grid-container {
     margin-bottom: 1rem;
-
+    .carousel-control-prev {
+        color: $color-primary
+    }
+    .carousel-control-next {
+        color: $color-primary
+    }
     .card {
         background-color: $light-gray;
         border: none;
