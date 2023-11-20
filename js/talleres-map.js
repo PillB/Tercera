@@ -14,13 +14,23 @@ function initMap() {
         displayStaticMapFallback();
     }
 }
+function checkMapLoaded() {
+    // Check if the map is loaded (you might need to adjust this check based on your implementation)
+    if (!document.querySelector('.gm-style')) {
+        console.error('Google Maps API failed to load');
+        displayStaticMapFallback();
+    }
+}
+
+// Call initMap after a timeout period to check if map loaded
+setTimeout(checkMapLoaded, 5000);  // Adjust the timeout as needed
 
 function displayStaticMapFallback() {
     const mapContainer = document.getElementById('map');
     mapContainer.innerHTML = `<iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3821975497084!2d-77.04279388518705!3d-12.046374045576708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b8405c6f8c9f%3A0x5d4c3e4c9f1b8e0!2sLima!5e0!3m2!1sen!2spe!4v1645631258431!5m2!1sen!2spe"
-        width="600"
-        height="450"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249744.04474635242!2d-77.1525926631275!3d-12.02625416661249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima!5e0!3m2!1sen!2spe!4v1700523675863!5m2!1sen!2spe"
+        width="100%"
+        height="100%"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
