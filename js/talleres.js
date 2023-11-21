@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Filter functionality
     document.getElementById('topic').addEventListener('change', function() {
         filterWorkshops();
+        initializeShowMore(); // Re-initialize show more after filtering
     });
 
     function filterWorkshops() {
