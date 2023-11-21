@@ -19,6 +19,10 @@ document.querySelector('form').addEventListener('submit', function(e) {
     // Get form data
     const title = DOMPurify.sanitize(document.getElementById('title').value);
     const description = tinymce.get('description').getContent();
+    if (!description.trim()) {
+        alert('Please fill out the description.');
+        return;
+    }
     const category = DOMPurify.sanitize(document.getElementById('category').value);
     const tags = DOMPurify.sanitize(document.getElementById('tags').value);
     const image = document.querySelector('#image-upload').dropzone.files[0]; // Get the uploaded file
@@ -36,14 +40,20 @@ document.querySelector('form').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         // Handle response
         console.log('Success:', data);
         // Redirect or show success message
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.error('Fetch Error:', error);
         // Handle errors here
     });
+
 });
