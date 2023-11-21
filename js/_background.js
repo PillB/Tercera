@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     let myp5;
-    let footer = document.querySelector('.footer-content'); // Assuming 'footer' is the class name
-    let footerHeight = footer.offsetHeight;
+
     function adjustCanvasSize() {
         if (myp5) {
-            myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight/2));
+            myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight);
             myp5.redraw();
         }
     }
@@ -14,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const nodeCount = 30; // Adjust the density of the nodes
 
         p.setup = () => {
-            let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight-(footerHeight/2));
+            let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight);
             canvas.position(0, 0);
             canvas.style('z-index', '-9'); // Place canvas behind content
             p.noLoop();
             // Apply blur effect
-            p.drawingContext.filter = 'blur(1000px)'; // Adjust the blur radius as needed
+            p.drawingContext.filter = 'blur(10px)'; // Adjust the blur radius as needed
 
             for (let i = 0; i < nodeCount; i++) {
                 nodes.push(createNode(p));
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         p.draw = () => {
             p.clear();
-            p.background(255, 25); // 50% transparency
+            p.background(255, 127); // 50% transparency
             nodes.forEach((node) => {
                 drawEdges(p, node, nodes);
                 drawNode(p, node);
@@ -49,13 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function drawNode(p, node) {
-            p.fill(p.color(127, 127, 213, 26)); // Soft Purple color
+            p.fill('#7F7FD5'); // Soft Purple color
             p.noStroke();
             p.ellipse(node.x, node.y, node.radius * 2, node.radius * 2);
         }
 
         function drawEdges(p, node, nodes) {
-            p.stroke(p.color(92, 172, 238, 26)); // Light Blue color
+            p.stroke('#5CACEE'); // Light Blue color
             p.strokeWeight(1);
         
             // Sort nodes by distance from the current node
@@ -77,23 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }, document.body);
-    fetch('../json/comunidad.json')
+
+    // Call this function after dynamically loading content
+    // Example: After fetching and rendering JSON content
+    fetch('../json/your-content.json')
         .then(response => response.json())
         .then(data => {
-            const tableBody = document.querySelector('.table tbody');
-            
-            data.communityTopics.forEach(topic => {
-                tableBody.innerHTML += `
-                    <tr>
-                        <td>${topic.title}</td>
-                        <td>${topic.author}</td>
-                        <td>${topic.likes}</td>
-                        <td>${topic.comments}</td>
-                        <td>${topic.visits}</td>
-                        <td>${topic.favorites}</td>
-                    </tr>
-                `;
-            });
+            // Code to dynamically generate content
+
             // Adjust canvas size after content is loaded
             adjustCanvasSize();
         })
