@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             populateTopicFilter(data);    
             filterWorkshops();
             initializeShowMore();
+            setupFilterListener();
         })
         .catch(error => console.error('Error:', error));
 
@@ -39,11 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         filters.style.display = filters.style.display === 'none' ? 'block' : 'none';
     });
 
-    // Filter functionality
-    document.getElementById('topic').addEventListener('change', function() {
-        filterWorkshops();
-        initializeShowMore(); // Re-initialize show more after filtering
-    });
+    function setupFilterListener() {
+        // Filter functionality
+        document.getElementById('topic').addEventListener('change', function() {
+            filterWorkshops();
+            initializeShowMore(); // Re-initialize show more after filtering
+        });
+    }
 
     function filterWorkshops() {
         const selectedTopic = document.getElementById('topic').value;
@@ -91,12 +94,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardsToShow = 6;
         const cards = document.querySelectorAll('.col-md-4');
         const showMoreBtn = document.getElementById('showMoreBtn');
+        const selectedTopic = document.getElementById('topic').value;
 
-        cards.forEach((card, index) => {
-            if (index >= cardsToShow) {
-                card.classList.add('d-none');
+        // Initially hide all cards and then show only the first 'cardsToShow' cards
+        cards.forEach(card => card.classList.add('d-none'));
+    
+        let shownCount = 0;
+        cards.forEach(card => {
+            const topic = card.getAttribute('data-topic');
+            if ((selectedTopic === 'all' || topic === selectedTopic) && shownCount < cardsToShow) {
+                card.classList.remove('d-none');
+                shownCount++;
             }
         });
+        showMoreBtn.classList.remove('d-none'); // Make sure the button is visible
 
         showMoreBtn.addEventListener('click', () => {
             let currentlyShown = Array.from(cards).filter(card => !card.classList.contains('d-none')).length;
@@ -111,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 });
 
 
