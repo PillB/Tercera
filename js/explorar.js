@@ -32,6 +32,39 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
             });
+            // Initialize "Show More" functionality after populating cards
+            initializeShowMore('aiProjectsContainer', 'showMoreProjectsBtn');
+            initializeShowMore('aiArticlesContainer', 'showMoreArticlesBtn');
         })
         .catch(error => console.error('Error:', error));
-});
+    });
+
+    function initializeShowMore(containerId, buttonId) {
+        const container = document.getElementById(containerId);
+        const showMoreBtn = document.getElementById(buttonId);
+        const cardsToShow = 6;
+        const cards = container.getElementsByClassName('col-md-4');
+    
+        // Initially hide cards exceeding the limit
+        for (let i = cardsToShow; i < cards.length; i++) {
+            cards[i].style.display = 'none';
+        }
+    
+        // Show More functionality
+        showMoreBtn.addEventListener('click', () => {
+            let shownCount = 0;
+            for (let card of cards) {
+                if (card.style.display !== 'none') {
+                    shownCount++;
+                }
+            }
+    
+            for (let i = shownCount; i < Math.min(shownCount + cardsToShow, cards.length); i++) {
+                cards[i].style.display = '';
+            }
+    
+            if (shownCount + cardsToShow >= cards.length) {
+                showMoreBtn.style.display = 'none';
+            }
+        });
+    }

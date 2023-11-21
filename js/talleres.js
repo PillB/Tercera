@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Function to populate topic filter options
             populateTopicFilter(data);    
             filterWorkshops();
+            initializeShowMore();
         })
         .catch(error => console.error('Error:', error));
 
@@ -85,7 +86,30 @@ document.addEventListener('DOMContentLoaded', function() {
             topicSelect.appendChild(option);
         });
     }
-        
+    function initializeShowMore() {
+        const cardsToShow = 6;
+        const cards = document.querySelectorAll('.col-md-4');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+
+        cards.forEach((card, index) => {
+            if (index >= cardsToShow) {
+                card.classList.add('d-none');
+            }
+        });
+
+        showMoreBtn.addEventListener('click', () => {
+            let currentlyShown = Array.from(cards).filter(card => !card.classList.contains('d-none')).length;
+            cards.forEach((card, index) => {
+                if (index >= currentlyShown && index < currentlyShown + cardsToShow) {
+                    card.classList.remove('d-none');
+                }
+            });
+
+            if (currentlyShown + cardsToShow >= cards.length) {
+                showMoreBtn.classList.add('d-none');
+            }
+        });
+    }
 });
 
 

@@ -5,6 +5,12 @@
         "alt": "Proyecto de IA para análisis de datos",
         "title": "Exploración de Datos con IA",
         "text": "Enfoque innovador en exploración de datos usando IA."
+      },
+      {
+        "image": "../img/compelling_thematic_visually_A.jpg",
+        "alt": "Proyecto de IA para prevención de desastres",
+        "title": "Prevención de Desastres con IA",
+        "text": "Enfoque innovador paa la prevención de desastres usando IA."
       }
     ],
     "aiArticles": [
@@ -13,6 +19,12 @@
         "alt": "Últimas tendencias en Visión Computacional",
         "title": "Últimas Tendencias en CV",
         "text": "Análisis de tendencias y desarrollos en Visión Computacional."
+      },
+      {
+        "image": "../img/vivid_engaging_image_A_and.jpg",
+        "alt": "Últimas tendencias en IA para la Simulación",
+        "title": "Últimas Tendencias en Simulación IA",
+        "text": "Análisis de tendencias y desarrollos en Simulación con IA."
       }
     ]
   }
