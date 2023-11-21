@@ -9,3 +9,5 @@ Dropzone.options.imageUpload = {
     dictDefaultMessage: 'Drop your image here or click to upload (Only images)',
     // Additional options can be added here
 };
+
+new Tagify(document.querySelector('#tags'));
