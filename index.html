@@ -12,184 +12,185 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="canvas-container"></div>
-    <header class="header-content">
-        <div class="container">
-            <h1><a href="index.html">CrearIA</a></h1>
-            <nav class="navbar">
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/explorar.html">Explorar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/talleres.html">Talleres</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/comunidad.html">Comunidad</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/publica.html">Publica</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="container mt-4">
-        <section class="hero-section text-center mb-4">
-            <h2>Bienvenido a CrearIA - El AI Community Hub en Español</h2>
-            <p>Descubre lo último en IA, comparte proyectos y conecta con otros entusiastas en IA.</p>
-            <a href="pages/explorar.html" class="btn btn-primary">Explora Proyectos IA</a>
-        </section>
-
-        <section class="featured-projects mb-4">
-            <h3>Proyectos de IA Destacados</h3>
-            <div id="featuredProjectsCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Each group of 3 items is one carousel-item -->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <!-- Cards for featured projects -->
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="./img/impactful_dynamic_image_A_and.jpg" class="card-img-top" alt="IA en la Salud">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Revolucionando la Salud con IA</h5>
-                                        <p class="card-text">Descubre cómo la IA está transformando el cuidado de los pacientes y el diagnóstico médico.</p>
-                                        <a href="#" class="btn btn-secondary">Leer más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="./img/innovative_modern_representation_An.jpg" class="card-img-top" alt="Vehículos Autónomos">
-                                    <div class="card-body">
-                                        <h5 class="card-title">IA en Vehículos Autónomos</h5>
-                                        <p class="card-text">Explorando los avances en tecnología de conducción autónoma impulsada por IA.</p>
-                                        <a href="#" class="btn btn-secondary">Leer más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="./img/insightful_relevant_An_image_and.jpg" class="card-img-top" alt="IA en Finanzas">
-                                    <div class="card-body">
-                                        <h5 class="card-title">IA Transformando las Finanzas</h5>
-                                        <p class="card-text">Vea cómo la IA está dando forma al futuro de los servicios financieros y la banca.</p>
-                                        <a href="#" class="btn btn-secondary">Leer más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Each group of 3 items is one carousel-item -->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="./img/intricate_futuristic_visually_A_an.jpg" class="card-img-top" alt="AI in Environmental Protection">
-                                    <div class="card-body">
-                                        <h5 class="card-title">IA para el Medio Ambiente</h5>
-                                        <p class="card-text">Innovative AI solutions for combating climate change and preserving biodiversity.</p>
-                                        <a href="#" class="btn btn-secondary">Leer más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="./img/mindblowing_captivating_visually_A_and.jpg" class="card-img-top" alt="AI in Education">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Avances para la Educación de la IA</h5>
-                                        <p class="card-text">Leveraging AI to personalize learning experiences and streamline administration.</p>
-                                        <a href="#" class="btn btn-secondary">Leer más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="./img/mindblowing_captivating_visually_A_and.jpg" class="card-img-top" alt="AI in Space Exploration">
-                                    <div class="card-body">
-                                        <h5 class="card-title">IA: La Siguiente Frontera de la Exploración Espacial</h5>
-                                        <p class="card-text">From satellite imagery analysis to interplanetary missions, AI is a game-changer.</p>
-                                        <a href="#" class="btn btn-secondary">Leer más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                            <!-- Additional items... --> 
-                </div>
-                <a class="carousel-control-prev" href="#featuredProjectsCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#featuredProjectsCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
+    <div class="d-flex flex-column min-vh-100">
+        <div id="canvas-container"></div>
+        <header class="header-content">
+            <div class="container">
+                <h1><a href="index.html">CrearIA</a></h1>
+                <nav class="navbar">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/explorar.html">Explorar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/talleres.html">Talleres</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/comunidad.html">Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/publica.html">Publica</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
+        </header>
+        <main class="container mt-4">
+            <section class="hero-section text-center mb-4">
+                <h2>Bienvenido a CrearIA - El AI Community Hub en Español</h2>
+                <p>Descubre lo último en IA, comparte proyectos y conecta con otros entusiastas en IA.</p>
+                <a href="pages/explorar.html" class="btn btn-primary">Explora Proyectos IA</a>
+            </section>
 
-        <section class="latest-news mb-4">
-            <h3>Noticias y Artículos de IA</h3>
-            <div id="aiNewsCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Each group of 3 items is one carousel-item -->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="news-item card">
-                                    <img src="./img/relevant_thoughtprovoking_image_A_and.jpg" alt="Avances en Aprendizaje Automático">
-                                    <h5>Nuevos Algoritmos Redefinen los Límites del Aprendizaje Automático</h5>
-                                    <p>Algoritmos innovadores están ampliando los límites del aprendizaje automático.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
+            <section class="featured-projects mb-4">
+                <h3>Proyectos de IA Destacados</h3>
+                <div id="featuredProjectsCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Each group of 3 items is one carousel-item -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <!-- Cards for featured projects -->
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="./img/impactful_dynamic_image_A_and.jpg" class="card-img-top" alt="IA en la Salud">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Revolucionando la Salud con IA</h5>
+                                            <p class="card-text">Descubre cómo la IA está transformando el cuidado de los pacientes y el diagnóstico médico.</p>
+                                            <a href="#" class="btn btn-secondary">Leer más</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="news-item card">
-                                    <img src="./img/representing_striking_visually_image_A.jpg" alt="IA en Arte">
-                                    <h5>IA: Un Nuevo Artista en el Bloque</h5>
-                                    <p>Explorando el papel de la IA en la creación de arte y en la expansión de los límites creativos.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="./img/innovative_modern_representation_An.jpg" class="card-img-top" alt="Vehículos Autónomos">
+                                        <div class="card-body">
+                                            <h5 class="card-title">IA en Vehículos Autónomos</h5>
+                                            <p class="card-text">Explorando los avances en tecnología de conducción autónoma impulsada por IA.</p>
+                                            <a href="#" class="btn btn-secondary">Leer más</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="news-item card">
-                                    <img src="./img/sophisticated_insightful_image_A_and.jpg" alt="Ética en IA">
-                                    <h5>Navegando el Paisaje Ético de la IA</h5>
-                                    <p>Abordando preocupaciones éticas en el desarrollo y despliegue de la IA.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="./img/insightful_relevant_An_image_and.jpg" class="card-img-top" alt="IA en Finanzas">
+                                        <div class="card-body">
+                                            <h5 class="card-title">IA Transformando las Finanzas</h5>
+                                            <p class="card-text">Vea cómo la IA está dando forma al futuro de los servicios financieros y la banca.</p>
+                                            <a href="#" class="btn btn-secondary">Leer más</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Each group of 3 items is one carousel-item -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="./img/intricate_futuristic_visually_A_an.jpg" class="card-img-top" alt="AI in Environmental Protection">
+                                        <div class="card-body">
+                                            <h5 class="card-title">IA para el Medio Ambiente</h5>
+                                            <p class="card-text">Innovative AI solutions for combating climate change and preserving biodiversity.</p>
+                                            <a href="#" class="btn btn-secondary">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="./img/mindblowing_captivating_visually_A_and.jpg" class="card-img-top" alt="AI in Education">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Avances para la Educación de la IA</h5>
+                                            <p class="card-text">Leveraging AI to personalize learning experiences and streamline administration.</p>
+                                            <a href="#" class="btn btn-secondary">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="./img/mindblowing_captivating_visually_A_and.jpg" class="card-img-top" alt="AI in Space Exploration">
+                                        <div class="card-body">
+                                            <h5 class="card-title">IA: La Siguiente Frontera de la Exploración Espacial</h5>
+                                            <p class="card-text">From satellite imagery analysis to interplanetary missions, AI is a game-changer.</p>
+                                            <a href="#" class="btn btn-secondary">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                                <!-- Additional items... --> 
                     </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="news-item card">
-                                    <img src="./img/symbolic_thoughtprovoking_image_A_and.jpg" alt="AI in Robotics">
-                                    <h5>Robots Cada Vez Más Inteligentes con la IA</h5>
-                                    <p>Unveiling the latest AI advancements in robotics and automation.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                    <a class="carousel-control-prev" href="#featuredProjectsCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#featuredProjectsCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="latest-news mb-4">
+                <h3>Noticias y Artículos de IA</h3>
+                <div id="aiNewsCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Each group of 3 items is one carousel-item -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="news-item card">
+                                        <img src="./img/relevant_thoughtprovoking_image_A_and.jpg" alt="Avances en Aprendizaje Automático">
+                                        <h5>Nuevos Algoritmos Redefinen los Límites del Aprendizaje Automático</h5>
+                                        <p>Algoritmos innovadores están ampliando los límites del aprendizaje automático.</p>
+                                        <a href="#" class="btn btn-secondary">Leer más</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="news-item card">
-                                    <img src="./img/thematic_futuristic_image_A_and.jpg" alt="AI for Language Processing">
-                                    <h5>IA Revolucionando el Procesamiento del Lenguaje</h5>
-                                    <p>AI is changing how we interact with languages, from translation to content creation.</p>
-                                    <a href="#" class="btn btn-secondary">Leer más</a>
+                                <div class="col-md-4">
+                                    <div class="news-item card">
+                                        <img src="./img/representing_striking_visually_image_A.jpg" alt="IA en Arte">
+                                        <h5>IA: Un Nuevo Artista en el Bloque</h5>
+                                        <p>Explorando el papel de la IA en la creación de arte y en la expansión de los límites creativos.</p>
+                                        <a href="#" class="btn btn-secondary">Leer más</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="news-item card">
+                                        <img src="./img/sophisticated_insightful_image_A_and.jpg" alt="Ética en IA">
+                                        <h5>Navegando el Paisaje Ético de la IA</h5>
+                                        <p>Abordando preocupaciones éticas en el desarrollo y despliegue de la IA.</p>
+                                        <a href="#" class="btn btn-secondary">Leer más</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                
-                            <!-- Additional items... -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="news-item card">
+                                        <img src="./img/symbolic_thoughtprovoking_image_A_and.jpg" alt="AI in Robotics">
+                                        <h5>Robots Cada Vez Más Inteligentes con la IA</h5>
+                                        <p>Unveiling the latest AI advancements in robotics and automation.</p>
+                                        <a href="#" class="btn btn-secondary">Leer más</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="news-item card">
+                                        <img src="./img/thematic_futuristic_image_A_and.jpg" alt="AI for Language Processing">
+                                        <h5>IA Revolucionando el Procesamiento del Lenguaje</h5>
+                                        <p>AI is changing how we interact with languages, from translation to content creation.</p>
+                                        <a href="#" class="btn btn-secondary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                
+                                <!-- Additional items... -->
+                    </div>
+                    <a class="carousel-control-prev" href="#aiNewsCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#aiNewsCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#aiNewsCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#aiNewsCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-content mt-4">
+            </section>
+        </main>
+    </div>
+    <footer class="footer-content mt-4 mt-auto">
         <div class="container text-center">
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#">Social Media</a></li>

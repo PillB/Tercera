@@ -146,5 +146,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (shownCount + cardsToShow >= cards.length) {
                 showMoreBtn.style.display = 'none';
             }
+            // Adjust canvas size after content is loaded
+            adjustCanvasSize();
         });
+        // Adjust canvas size after content is loaded
+        adjustCanvasSize();
     }
+
+window.addEventListener('resize', adjustCanvasSize); // Adjust canvas size on window resize

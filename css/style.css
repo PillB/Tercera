@@ -101,6 +101,11 @@ a:hover {
   color: #ccc;
 }
 
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -211,6 +216,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {
@@ -353,6 +363,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {
@@ -605,6 +620,11 @@ a:hover {
   color: #ccc;
 }
 
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -735,6 +755,11 @@ a:hover {
   color: #ccc;
 }
 
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -845,6 +870,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {
@@ -1005,6 +1035,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {
@@ -1147,6 +1182,11 @@ a:hover {
   color: #ccc;
 }
 
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -1257,6 +1297,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {
@@ -1395,6 +1440,11 @@ a:hover {
   color: #ccc;
 }
 
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -1525,6 +1575,11 @@ a:hover {
   color: #ccc;
 }
 
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -1635,6 +1690,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {
@@ -1795,6 +1855,11 @@ a:hover {
 }
 .navbar ul.nav .nav-item .nav-link:hover {
   color: #ccc;
+}
+
+.footer-content {
+  /* If you want to make sure it's always at the bottom */
+  margin-top: auto;
 }
 
 #canvas-container {

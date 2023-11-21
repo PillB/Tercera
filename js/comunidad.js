@@ -99,3 +99,5 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error:', error));
 });
+
+window.addEventListener('resize', adjustCanvasSize); // Adjust canvas size on window resize

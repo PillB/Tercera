@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Adjust canvas size after content is loaded
+    adjustCanvasSize();
+});
 // Initialize TinyMCE Editor
 tinymce.init({ selector: '#description' });
 
@@ -17,7 +21,7 @@ let footer = document.querySelector('.footer-content'); // Assuming 'footer' is 
 let footerHeight = footer.offsetHeight;
 function adjustCanvasSize() {
     if (myp5) {
-        myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight/2));
+        myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight));
         myp5.redraw();
     }
 }
@@ -27,7 +31,7 @@ myp5 = new p5((p) => {
     const nodeCount = 30; // Adjust the density of the nodes
 
     p.setup = () => {
-        let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight-(footerHeight/2));
+        let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight-(footerHeight));
         canvas.position(0, 0);
         canvas.style('z-index', '-9'); // Place canvas behind content
         p.noLoop();
@@ -89,9 +93,7 @@ myp5 = new p5((p) => {
             }
         }
     }
-}, document.body);
-// Adjust canvas size after content is loaded
-adjustCanvasSize();    
+}, document.body); 
 // Form submission with AJAX and DOMPurify
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -135,5 +137,9 @@ document.querySelector('form').addEventListener('submit', function(e) {
         console.error('Fetch Error:', error);
         // Handle errors here
     });
-
+    // Adjust canvas size after content is loaded
+    adjustCanvasSize();
 });
+
+
+window.addEventListener('resize', adjustCanvasSize); // Adjust canvas size on window resize

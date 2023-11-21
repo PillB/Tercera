@@ -12,99 +12,100 @@
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 </head>
 <body>
-    <div id="canvas-container"></div>
-    <header class="header-content">
-        <div class="container">
-            <h1><a href="../index.html">CrearIA</a></h1>
-            <nav class="navbar">
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="explorar.html">Explorar</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="talleres.html">Talleres</a></li>
-                    <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
-                    <li class="nav-item"><a class="nav-link" href="publica.html">Publica</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="d-flex flex-column min-vh-100">
+        <div id="canvas-container"></div>
+        <header class="header-content">
+            <div class="container">
+                <h1><a href="../index.html">CrearIA</a></h1>
+                <nav class="navbar">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="explorar.html">Explorar</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="talleres.html">Talleres</a></li>
+                        <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="publica.html">Publica</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <main class="container">
-        <section class="carousel">
-            <div class="carousel-header">
-                <h2>Talleres Destacados</h2>
-                <button class="filter-toggle">☰ Filtros</button>
-            </div>
-            <!-- Filter Section -->
-            <div class="filters" id="workshopFilters" style="display: none;">
-                <h3>Filtros</h3>
-                <div class="filter-option">
-                    <label for="topic">Tema:</label>
-                    <select id="topic">
-                        <option value="all">Todos</option>
-                        <option value="cybersecurity">Cybersecurity</option>
-                        <option value="generative">Generative</option>
-                        <option value="healthcare">Healthcare</option>
-                        <option value="investment">Investment</option>
-                        <option value="research">Research</option>
-                        <!-- More options... -->
-                    </select>
+        <main class="container">
+            <section class="carousel">
+                <div class="carousel-header">
+                    <h2>Talleres Destacados</h2>
+                    <button class="filter-toggle">☰ Filtros</button>
                 </div>
-                <!-- Additional filters like difficulty, location, etc., can be added here -->
-            </div>
-            <!-- Existing workshop items... -->
-            <div class="row" id="workshopCards">
-                <!-- Example Workshop Items -->
-                <div class="col-md-4 mb-3" data-topic="generative"> <!-- Each card is now a column -->
-                    <div class="card"> <!-- Card class for styling -->
-                        <img src="../img/compelling_thematic_visually_A.jpg" alt="Descripción del taller 1" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text">Taller de IA Generativa</p>
+                <!-- Filter Section -->
+                <div class="filters" id="workshopFilters" style="display: none;">
+                    <h3>Filtros</h3>
+                    <div class="filter-option">
+                        <label for="topic">Tema:</label>
+                        <select id="topic">
+                            <option value="all">Todos</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="generative">Generative</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="investment">Investment</option>
+                            <option value="research">Research</option>
+                            <!-- More options... -->
+                        </select>
+                    </div>
+                    <!-- Additional filters like difficulty, location, etc., can be added here -->
+                </div>
+                <!-- Existing workshop items... -->
+                <div class="row" id="workshopCards">
+                    <!-- Example Workshop Items -->
+                    <div class="col-md-4 mb-3" data-topic="generative"> <!-- Each card is now a column -->
+                        <div class="card"> <!-- Card class for styling -->
+                            <img src="../img/compelling_thematic_visually_A.jpg" alt="Descripción del taller 1" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Taller de IA Generativa</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3" data-topic="cybersecurity"> <!-- Each card is now a column -->
-                    <div class="card"> <!-- Card class for styling -->
-                        <img src="../img/creative_compelling_visually_A.jpg" alt="Descripción del taller 2" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text">Taller de IA para la Ciberseguridad</p>
+                    <div class="col-md-4 mb-3" data-topic="cybersecurity"> <!-- Each card is now a column -->
+                        <div class="card"> <!-- Card class for styling -->
+                            <img src="../img/creative_compelling_visually_A.jpg" alt="Descripción del taller 2" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Taller de IA para la Ciberseguridad</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3" data-topic="investment"> <!-- Each card is now a column -->
-                    <div class="card"> <!-- Card class for styling -->
-                        <img src="../img/detailed_thematic_image_A_and.jpg" alt="Descripción del taller 3" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text">Taller de IA para la Inversión</p>
+                    <div class="col-md-4 mb-3" data-topic="investment"> <!-- Each card is now a column -->
+                        <div class="card"> <!-- Card class for styling -->
+                            <img src="../img/detailed_thematic_image_A_and.jpg" alt="Descripción del taller 3" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Taller de IA para la Inversión</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3" data-topic="healthcare"> <!-- Each card is now a column -->
-                    <div class="card"> <!-- Card class for styling -->
-                        <img src="../img/dynamic_futuristic_image_A_and.jpg" alt="Descripción del taller 4" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text">Taller de IA para la Salud</p>
+                    <div class="col-md-4 mb-3" data-topic="healthcare"> <!-- Each card is now a column -->
+                        <div class="card"> <!-- Card class for styling -->
+                            <img src="../img/dynamic_futuristic_image_A_and.jpg" alt="Descripción del taller 4" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Taller de IA para la Salud</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3" data-topic="research"> <!-- Each card is now a column -->
-                    <div class="card"> <!-- Card class for styling -->
-                        <img src="../img/educationalthemed_dynamic_image_A_and.jpg" alt="Descripción del taller 5" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text">Taller de IA para la Investigación</p>
+                    <div class="col-md-4 mb-3" data-topic="research"> <!-- Each card is now a column -->
+                        <div class="card"> <!-- Card class for styling -->
+                            <img src="../img/educationalthemed_dynamic_image_A_and.jpg" alt="Descripción del taller 5" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Taller de IA para la Investigación</p>
+                            </div>
                         </div>
                     </div>
+                    <!-- Add more workshop items here -->
                 </div>
-                <!-- Add more workshop items here -->
-            </div>
-            <button class="btn btn-primary mt-3" id="showMoreBtn">Mostrar más</button>
-        </section>
-        <section id="map-container" class="container">
-            <h2>Mapa de Talleres</h2>
-            <div id="map" style="height: 400px;"></div> <!-- Set a height for the map container -->
-        </section>
-    </main>
-
-    <footer class="footer-content mt-4">
+                <button class="btn btn-primary mt-3" id="showMoreBtn">Mostrar más</button>
+            </section>
+            <section id="map-container" class="container">
+                <h2>Mapa de Talleres</h2>
+                <div id="map" style="height: 400px;"></div> <!-- Set a height for the map container -->
+            </section>
+        </main>
+    </div>
+    <footer class="footer-content mt-4 mt-auto">
         <div class="container text-center">
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#">Social Media</a></li>

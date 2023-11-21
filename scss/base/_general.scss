@@ -58,6 +58,8 @@ a {
     background-color: lightblue;
 }
 
+
+
 .navbar {
     ul.nav {
         list-style-type: none;
@@ -75,6 +77,11 @@ a {
             }
         }
     }
+}
+
+.footer-content {
+    /* If you want to make sure it's always at the bottom */
+    margin-top: auto;
 }
 
 #canvas-container {

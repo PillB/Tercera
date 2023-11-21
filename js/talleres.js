@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('topic').addEventListener('change', function() {
             filterWorkshops();
             initializeShowMore(); // Re-initialize show more after filtering
+            // Adjust canvas size after content is loaded
+            adjustCanvasSize();
         });
     }
 
@@ -201,9 +203,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentlyShown + cardsToShow >= cards.length) {
                 showMoreBtn.classList.add('d-none');
             }
+            // Adjust canvas size after content is loaded
+            adjustCanvasSize();
         });
     }
 
 });
 
-
+window.addEventListener('resize', adjustCanvasSize); // Adjust canvas size on window resize
