@@ -1,17 +1,33 @@
 function initMap() {
     try {
         var mapOptions = {
-            zoom: 8,
-            center: { lat: -77.152, lng: -12.026 }, // Example coordinates
+            zoom: 12,
+            center: { lat: -12.0464, lng: -77.0428 } // Center map around Lima, Peru
         };
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-        // Add markers for each workshop location
-        // Example: new google.maps.Marker({ position: { lat: -34.397, lng: 150.644 }, map: map });
-        // Add more markers as needed
+        // Fetch JSON data and add markers
+        fetch('../json/talleres.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => {
+                    // Assuming each item has a 'position' with lat and lng
+                    var position = { lat: item.position.lat, lng: item.position.lng };
+                    var marker = new google.maps.Marker({
+                        position: position,
+                        map: map,
+                        title: item.title
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error loading workshop data:', error);
+                displayStaticMapFallback();
+            });
     } catch (error) {
         console.error('Google Maps API error:', error);
         displayStaticMapFallback();
+        adjustCanvasSize();
     }
     // Adjust canvas size after content is loaded
     adjustCanvasSize();
@@ -21,6 +37,7 @@ function checkMapLoaded() {
     if (!document.querySelector('.gm-style')) {
         console.error('Google Maps API failed to load');
         displayStaticMapFallback();
+        adjustCanvasSize();
     }
     // Adjust canvas size after content is loaded
     adjustCanvasSize();

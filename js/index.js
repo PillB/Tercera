@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let footerHeight = footer.offsetHeight;
     function adjustCanvasSize() {
         if (myp5) {
-            myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight/2));
+            myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight));
             myp5.redraw();
         }
     }
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const nodeCount = 30; // Adjust the density of the nodes
 
         p.setup = () => {
-            let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight-(footerHeight/2));
+            let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight-(footerHeight));
             canvas.position(0, 0);
             canvas.style('z-index', '-9'); // Place canvas behind content
             p.noLoop();
