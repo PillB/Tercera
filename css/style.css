@@ -115,6 +115,27 @@ a:hover {
   z-index: -1; /* Puts the canvas behind your content */
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 button {
   background-color: #5CACEE;
   color: #000000;
@@ -230,6 +251,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .filter-toggle {
@@ -377,6 +419,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header, footer {
@@ -634,6 +697,27 @@ a:hover {
   z-index: -1; /* Puts the canvas behind your content */
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .carousel, .grid-container {
   margin-bottom: 1rem;
 }
@@ -769,6 +853,27 @@ a:hover {
   z-index: -1; /* Puts the canvas behind your content */
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 button {
   background-color: #5CACEE;
   color: #000000;
@@ -884,6 +989,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header, footer {
@@ -1049,6 +1175,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header-content {
@@ -1196,6 +1343,27 @@ a:hover {
   z-index: -1; /* Puts the canvas behind your content */
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 button {
   background-color: #5CACEE;
   color: #000000;
@@ -1311,6 +1479,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header, footer {
@@ -1454,6 +1643,27 @@ a:hover {
   z-index: -1; /* Puts the canvas behind your content */
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .carousel, .grid-container {
   margin-bottom: 1rem;
 }
@@ -1589,6 +1799,27 @@ a:hover {
   z-index: -1; /* Puts the canvas behind your content */
 }
 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 button {
   background-color: #5CACEE;
   color: #000000;
@@ -1704,6 +1935,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header, footer {
@@ -1869,6 +2121,27 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: -1; /* Puts the canvas behind your content */
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, .card-body, .card-title, .card-text {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header-content {
