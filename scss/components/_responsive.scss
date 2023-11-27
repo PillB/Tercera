@@ -53,7 +53,22 @@ $breakpoint-xl: 1200px; // Extra large devices
             padding: 0.75rem;
         }
     }
-
+    .navbar-toggler {
+        display: block;
+      }
+    
+      .navbar-collapse {
+        display: none;
+      }
+    
+      .navbar-toggler-icon {
+        background-color: #fff;
+      }
+    
+      // Show the navbar when the hamburger menu is clicked
+      .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+        display: block;
+      }
     // Header and Footer adjustments
     header, footer {
         padding: 1rem 1.5rem;
@@ -96,7 +111,22 @@ $breakpoint-xl: 1200px; // Extra large devices
             padding: 0.75rem;
         }
     }
-
+    .navbar-toggler {
+        display: block;
+      }
+    
+      .navbar-collapse {
+        display: none;
+      }
+    
+      .navbar-toggler-icon {
+        background-color: #fff;
+      }
+    
+      // Show the navbar when the hamburger menu is clicked
+      .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+        display: block;
+      }
     // Header and Footer adjustments
     header, footer {
         padding: 0.75rem 1rem;
@@ -139,6 +169,22 @@ $breakpoint-xl: 1200px; // Extra large devices
             padding: 0.75rem;
         }
     }
+    .navbar-toggler {
+        display: block;
+      }
+    
+      .navbar-collapse {
+        display: none;
+      }
+    
+      .navbar-toggler-icon {
+        background-color: #fff;
+      }
+    
+      // Show the navbar when the hamburger menu is clicked
+      .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+        display: block;
+      }
 
     // Header and Footer adjustments
     header, footer {

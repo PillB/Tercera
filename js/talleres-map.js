@@ -44,7 +44,7 @@ function checkMapLoaded() {
 }
 
 // Call initMap after a timeout period to check if map loaded
-setTimeout(checkMapLoaded, 5000);  // Adjust the timeout as needed
+//setTimeout(checkMapLoaded, 500);  // Adjust the timeout as needed
 
 function displayStaticMapFallback() {
     const mapContainer = document.getElementById('map');

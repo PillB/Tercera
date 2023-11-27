@@ -38,3 +38,22 @@
     }
 }
 
+// Media query for small screens (hamburger menu)
+@media (max-width: 768px) {
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-collapse {
+      display: none;
+    }
+  
+    .navbar-toggler-icon {
+      background-color: #fff;
+    }
+  
+    // Show the navbar when the hamburger menu is clicked
+    .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+      display: block;
+    }
+  }
