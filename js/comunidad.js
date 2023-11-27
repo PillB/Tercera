@@ -1,25 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let myp5;
-    let footer = document.querySelector('.footer-content'); // Assuming 'footer' is the class name
-    let footerHeight = footer.offsetHeight;
-    function adjustCanvasSize() {
-        if (myp5) {
-            myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight));
-            myp5.redraw();
-        }
+let myp5;
+let footer = document.querySelector('.footer-content'); // Assuming 'footer' is the class name
+let footerHeight = footer.offsetHeight;
+function adjustCanvasSize() {
+    if (myp5) {
+        myp5.resizeCanvas(myp5.windowWidth, document.body.scrollHeight-(footerHeight));
+        myp5.redraw();
     }
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Initialize p5 instance
     myp5 = new p5((p) => {
         let nodes = [];
-        const nodeCount = 30; // Adjust the density of the nodes
+        const nodeCount = 30; // Node density
 
         p.setup = () => {
-            let canvas = p.createCanvas(p.windowWidth, document.body.scrollHeight-(footerHeight));
+            let canvas = p.createCanvas(window.innerWidth, document.body.scrollHeight - footer.offsetHeight);
             canvas.position(0, 0);
-            canvas.style('z-index', '-9'); // Place canvas behind content
+            canvas.style('z-index', '-9');
             p.noLoop();
-            // Apply blur effect
-            p.drawingContext.filter = 'blur(1000px)'; // Adjust the blur radius as needed
+            p.drawingContext.filter = 'blur(10px)'; // Adjust blur radius
 
             for (let i = 0; i < nodeCount; i++) {
                 nodes.push(createNode(p));
@@ -28,15 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         p.draw = () => {
             p.clear();
-            p.background(255, 25); // 50% transparency
+            p.background(255, 127); // Adjust transparency
             nodes.forEach((node) => {
                 drawEdges(p, node, nodes);
                 drawNode(p, node);
             });
-        };
-
-        p.windowResized = () => {
-            adjustCanvasSize();
         };
 
         // ... createNode, drawNode, drawEdges functions ...
@@ -77,11 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }, document.body);
+
+    // Fetch community data and update table
     fetch('../json/comunidad.json')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('.table tbody');
-            
+
             data.communityTopics.forEach(topic => {
                 tableBody.innerHTML += `
                     <tr>
@@ -94,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </tr>
                 `;
             });
-            // Adjust canvas size after content is loaded
             adjustCanvasSize();
         })
         .catch(error => console.error('Error:', error));
 });
 
-window.addEventListener('resize', adjustCanvasSize); // Adjust canvas size on window resize
+// Global resize event listener
+window.addEventListener('resize', adjustCanvasSize);
