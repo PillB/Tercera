@@ -30,6 +30,33 @@ document.addEventListener('DOMContentLoaded', function() {
         navbarCollapse.classList.remove("show");
       }
     });
+    // Check if -webkit-line-clamp is supported
+    if (window.CSS && CSS.supports('-webkit-line-clamp', '2')) {
+        // Supported, no need for JavaScript fallback
+    } else {
+        // Apply JavaScript-based text clamping
+        const cardTitles = document.querySelectorAll('.card-title');
+        const cardTexts = document.querySelectorAll('.card-text');
+
+        cardTitles.forEach((title) => {
+            const maxHeight = 2 * parseInt(window.getComputedStyle(title).lineHeight, 10);
+            const contentHeight = title.getBoundingClientRect().height;
+            if (contentHeight > maxHeight) {
+                title.style.maxHeight = maxHeight + 'px';
+                title.style.overflow = 'hidden';
+            }
+        });
+
+        cardTexts.forEach((text) => {
+            const maxHeight = 2 * parseInt(window.getComputedStyle(text).lineHeight, 10);
+            const contentHeight = text.getBoundingClientRect().height;
+            if (contentHeight > maxHeight) {
+                text.style.maxHeight = maxHeight + 'px';
+                text.style.overflow = 'hidden';
+            }
+        });
+    }
+
     let myp5;
     let footer = document.querySelector('.footer-content'); // Assuming 'footer' is the class name
     let footerHeight = footer.offsetHeight;
