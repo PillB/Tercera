@@ -1,23 +1,21 @@
 @import '../base/colores';
 @import '../base/general';
 
-// Carousel and Grid with Bootstrap and custom styles
-.carousel, .grid-container {
-    margin-bottom: 1rem;
-    .carousel-control-prev, .carousel-control-next {
-        color: $color-primary;
-        background-color: rgba($color-primary-dark, 0.5);
-        padding: 0.1rem;
-    }
-    
-    .card {
-        background-color: $light-gray;
-        border: none;
-        border-radius: .25rem;
 
-        .card-body {
-            padding: 1rem;
-            color: $accent-color;
-        }
+.carousel-control-prev, .carousel-control-next {
+    color: $color-primary;
+    background-color: rgba($color-primary-dark, 0.5);
+    padding: 0.1rem;
+}
+
+.card {
+    background-color: $light-gray;
+    border: none;
+    border-radius: .25rem;
+
+    .card-body {
+        padding: 1rem;
+        color: $accent-color; // Ensuring consistent font color
     }
 }
+

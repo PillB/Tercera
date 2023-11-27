@@ -80,24 +80,18 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('json/index.json')
         .then(response => response.json())
         .then(data => {
-            const projectCarousel = document.querySelector('#featuredProjectsCarousel .carousel-inner');
-            const newsCarousel = document.querySelector('#aiNewsCarousel .carousel-inner');
-
-            // Function to create carousel items v2
             function createCarouselItems(items, container, isProject = true) {
                 let carouselHTML = '';
                 let rowContent = '';
                 let itemCount = 0;
-                let isFirstItem = container.children.length === 0; // Check if there are pre-existing items
+                let activeAdded = false; // Flag to check if active class has been added
 
                 items.forEach((item, index) => {
-                    // Start a new row for every 3 items
                     if (itemCount === 0) {
                         rowContent = `<div class="row">`;
                     }
 
-                    // Add the item to the row
-                    rowContent += isProject ? `
+                    rowContent += `
                         <div class="col-md-4">
                             <div class="card">
                                 <img src="${item.image}" class="card-img-top" alt="${item.alt}">
@@ -107,39 +101,51 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <a href="#" class="btn btn-secondary">Read More</a>
                                 </div>
                             </div>
-                        </div>
-                    ` : `
-                        <div class="col-md-4">
-                            <div class="news-item card">
-                                <img src="${item.image}" alt="${item.alt}">
-                                <h5 class="card-title">${item.title}</h5>
-                                <p>${item.text}</p>
-                                <a href="#" class="btn btn-link">Read More</a>
-                            </div>
-                        </div>
-                    `;
+                        </div>`;
 
                     itemCount++;
 
-                    // Close the row and add to carouselHTML after every 3 items or at the end
                     if (itemCount === 3 || index === items.length - 1) {
-                        rowContent += `</div>`; // Close the row
-                        carouselHTML += `<div class="carousel-item ${isFirstItem && index < 3 ? 'active' : ''}">${rowContent}</div>`;
-                        isFirstItem = false;
-                        itemCount = 0; // Reset item count for the next row
+                        rowContent += `</div>`;
+                        let isActive = !activeAdded; // Only the first set of items should be active
+                        carouselHTML += `<div class="carousel-item ${isActive ? 'active' : ''}">${rowContent}</div>`;
+                        if (isActive) activeAdded = true; // Update flag
+                        itemCount = 0;
                     }
                 });
 
                 container.innerHTML += carouselHTML;
             }
 
-            createCarouselItems(data.featuredProjects, projectCarousel, true);
-            createCarouselItems(data.aiNews, newsCarousel, false);
+            createCarouselItems(data.featuredProjects, document.querySelector('#featuredProjectsCarousel .carousel-inner'), true);
+            createCarouselItems(data.aiNews, document.querySelector('#aiNewsCarousel .carousel-inner'), false);
+            // Adjust active carousel items after loading JSON data
+            adjustActiveCarouselItems('#featuredProjectsCarousel');
+            adjustActiveCarouselItems('#aiNewsCarousel');
             // Adjust canvas size after content is loaded
             adjustCanvasSize();
         })
         .catch(error => console.error('Error:', error));
 });
+
+function adjustActiveCarouselItems(carouselId) {
+    const carousel = document.querySelector(carouselId);
+    const carouselItems = carousel.querySelectorAll('.carousel-item');
+
+    let firstItemActive = false;
+    carouselItems.forEach((item, index) => {
+        if (index === 0 && item.classList.contains('active')) {
+            firstItemActive = true;
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    if (!firstItemActive) {
+        carouselItems[0].classList.add('active');
+    }
+}
+
 let myp5;
 let footer = document.querySelector('.footer-content'); // Assuming 'footer' is the class name
 let footerHeight = footer.offsetHeight;

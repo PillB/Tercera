@@ -1,7 +1,7 @@
 @import 'colores'; // Ensure color variables are available
 
 $base-padding: 0;
-// Basic Styling and Resets
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -18,14 +18,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: $background-color-light; // Utilize color variable for consistency
-    color: $text-color; // Default text color
+    background-color: $background-color-light;
+    color: $text-color;
 }
 
-// SEO-friendly Typography
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
-    color: $color-gray-dark; // Enhanced readability
+    color: $color-gray-dark;
 }
 
 p {
@@ -33,12 +32,11 @@ p {
 }
 
 a {
-    color: $link-color; // Use primary color for links
+    color: $link-color;
     text-decoration: none;
-
     &:hover {
         text-decoration: underline;
-        color: $link-hover-color; // Darken on hover for interactive feedback
+        color: $link-hover-color;
     }
 }
 
@@ -47,7 +45,7 @@ a {
     margin: 0 auto;
     padding: 15px;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
 }
 
 .header-content, .footer-content {
@@ -55,10 +53,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: lightblue;
+    background-color: lightblue; // Adjusted background color
 }
-
-
 
 .navbar {
     ul.nav {
@@ -80,7 +76,6 @@ a {
 }
 
 .footer-content {
-    /* If you want to make sure it's always at the bottom */
     margin-top: auto;
 }
 
@@ -90,25 +85,26 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Puts the canvas behind your content */
+    z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
     overflow: hidden;
-  }
-  .col-md-4 {
-    display:flex;
+}
+
+.col-md-4 {
+    display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-  }
+}
 
-  .card, .card-body, .card-title, .card-text {
+.card, .card-body, .card-title, .card-text {
     display: flex;
     flex-grow: 1;
-    -webkit-flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
-  }
+}

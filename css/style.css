@@ -102,7 +102,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -112,13 +111,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -131,7 +131,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -240,7 +239,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -250,13 +248,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -269,7 +268,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -408,7 +406,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -418,13 +415,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -437,7 +435,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -510,48 +507,6 @@ footer .list-inline .list-inline-item {
 .btn-primary:hover {
   background-color: #0069d9;
   border-color: #0062cc;
-}
-
-.news-item, .card {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.news-item .card-body, .card .card-body {
-  padding: 1rem;
-}
-.news-item .card-body .card-title, .card .card-body .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-.news-item .card-body .card-text, .card .card-body .card-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-.news-item .card-body .btn-link, .card .card-body .btn-link {
-  color: #007bff;
-}
-.news-item .card-body .btn-link:hover, .card .card-body .btn-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-.news-item .item-body, .card .item-body {
-  padding: 1rem;
-}
-.news-item .item-body .item-title, .card .item-body .item-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-.news-item .item-body .item-text, .card .item-body .item-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-.news-item .item-body .btn-link, .card .item-body .btn-link {
-  color: #007bff;
-}
-.news-item .item-body .btn-link:hover, .card .item-body .btn-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
 }
 
 .table-responsive {
@@ -684,7 +639,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -694,13 +648,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -713,25 +668,22 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.carousel, .grid-container {
-  margin-bottom: 1rem;
-}
-.carousel .carousel-control-prev, .carousel .carousel-control-next, .grid-container .carousel-control-prev, .grid-container .carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   color: #5CACEE;
   background-color: rgba(53, 122, 189, 0.5);
   padding: 0.1rem;
 }
-.carousel .card, .grid-container .card {
+
+.card {
   background-color: #F5F5F5;
   border: none;
   border-radius: 0.25rem;
 }
-.carousel .card .card-body, .grid-container .card .card-body {
+.card .card-body {
   padding: 1rem;
   color: #7F7FD5;
 }
@@ -840,7 +792,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -850,13 +801,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -869,7 +821,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -978,7 +929,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -988,13 +938,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1007,7 +958,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1164,7 +1114,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -1174,13 +1123,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1193,7 +1143,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1330,7 +1279,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -1340,13 +1288,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1359,7 +1308,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1468,7 +1416,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -1478,13 +1425,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1497,7 +1445,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1630,7 +1577,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -1640,13 +1586,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1659,25 +1606,22 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.carousel, .grid-container {
-  margin-bottom: 1rem;
-}
-.carousel .carousel-control-prev, .carousel .carousel-control-next, .grid-container .carousel-control-prev, .grid-container .carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   color: #5CACEE;
   background-color: rgba(53, 122, 189, 0.5);
   padding: 0.1rem;
 }
-.carousel .card, .grid-container .card {
+
+.card {
   background-color: #F5F5F5;
   border: none;
   border-radius: 0.25rem;
 }
-.carousel .card .card-body, .grid-container .card .card-body {
+.card .card-body {
   padding: 1rem;
   color: #7F7FD5;
 }
@@ -1786,7 +1730,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -1796,13 +1739,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1815,7 +1759,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -1924,7 +1867,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -1934,13 +1876,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -1953,7 +1896,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -2110,7 +2052,6 @@ a:hover {
 }
 
 .footer-content {
-  /* If you want to make sure it's always at the bottom */
   margin-top: auto;
 }
 
@@ -2120,13 +2061,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Puts the canvas behind your content */
+  z-index: -1;
 }
 
-.card-text {
+.card-title, .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -2139,7 +2081,6 @@ a:hover {
 .card, .card-body, .card-title, .card-text {
   display: flex;
   flex-grow: 1;
-  -webkit-flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
 }
