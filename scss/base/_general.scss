@@ -88,6 +88,13 @@ a {
     z-index: -1;
 }
 
+
+.card, .card-body, .card-title, .card-text {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .card-title, .card-text {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -96,15 +103,8 @@ a {
     overflow: hidden;
 }
 
-.col-md-4 {
+.carousel-inner, .col-md-4 {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-}
-
-.card, .card-body, .card-title, .card-text {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
 }
